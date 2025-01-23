@@ -37,7 +37,8 @@ function Accordion() {
 
     return (
         <div className='wrapper'>
-            <h2>Project 1 Accordion</h2>
+            <p>Project 1</p>
+            <h2>Accordion</h2>
 
             <button onClick={handleSelectionToggle}>
                 {enableMultiSelection
