@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import style from "./ColorGenerator.module.css";
 
 function RandomColorGenerator() {
     const [randomColor, setRandomColor] = useState("Click On Generate Button");
@@ -60,23 +61,27 @@ function RandomColorGenerator() {
     }
 
     return (
-        <div className='wrapper'>
+        <div className={style.wrapper}>
+            <p>Project 2</p>
             <h2>Random Color Generator</h2>
-            <div className='controls'>
-                <label htmlFor='color-format'>Chose a Color Format: </label>
-                <select
-                    value={colorFormat}
-                    onChange={handleColorFormatChange}
-                    name='color-format'
-                    id='color-format'>
-                    <option value='rgb'>Rgb</option>
-                    <option value='hex'>Hex</option>
-                    <option value='hsl'>Hsl</option>
-                </select>
+            <div className={style.controls}>
+                <div>
+                    <label htmlFor='color-format'>Chose a Color Format: </label>
+                    <select
+                        value={colorFormat}
+                        onChange={handleColorFormatChange}
+                        name='color-format'
+                        id='color-format'>
+                        <option value='rgb'>Rgb</option>
+                        <option value='hex'>Hex</option>
+                        <option value='hsl'>Hsl</option>
+                    </select>
+                </div>
+
                 <button onClick={handleGenerateColor}>Generate Color</button>
             </div>
 
-            <div className='color' style={{ backgroundColor: randomColor }}>
+            <div className={style.color} style={{ backgroundColor: randomColor }}>
                 <p>{randomColor}</p>
             </div>
         </div>
