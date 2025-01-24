@@ -1,4 +1,4 @@
-import styles from "./Accordion.module.css";
+import style from "./Accordion.module.css";
 import data from "./data.js";
 import React, { useState } from "react";
 
@@ -36,7 +36,7 @@ function Accordion() {
     }
 
     return (
-        <div className={styles.wrapper}>
+        <div className={style.wrapper}>
             <p>Project 1</p>
             <h2>Accordion</h2>
 
@@ -45,12 +45,12 @@ function Accordion() {
                     ? "Enable Multiple Selection"
                     : "Disable Multiple Selection"}
             </button>
-            <div className={styles.accordion}>
+            <div className={style.accordion}>
                 {data && data.length > 0 ? (
                     data.map((dataItem) => (
-                        <div key={dataItem.id} className={styles.item}>
+                        <div key={dataItem.id} className={style.item}>
                             <div
-                                className={styles.question}
+                                className={style.question}
                                 onClick={
                                     enableMultiSelection
                                         ? () => handleSingleSelection(dataItem.id)
@@ -62,12 +62,12 @@ function Accordion() {
 
                             {selected === dataItem.id ||
                                 multiSelected.indexOf(dataItem.id) !== -1 ? (
-                                <p className={styles.answer}>{dataItem.answer}</p>
+                                <p className={style.answer}>{dataItem.answer}</p>
                             ) : null}
                         </div>
                     ))
                 ) : (
-                    <div className={styles.error}>No data found!</div>
+                    <div className={style.error}>No data found!</div>
                 )}
             </div>
         </div>
