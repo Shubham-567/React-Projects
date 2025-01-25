@@ -2,7 +2,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import style from "./StarRating.module.css";
 import React, { useState } from "react";
 
-function StarRating({ noOfStars = 10 }) {
+function StarRating({ noOfStars = 5 }) {
     const [rating, setRating] = useState(0);
     const [hover, setHover] = useState(0);
 
