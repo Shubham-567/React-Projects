@@ -6,11 +6,12 @@ function App() {
 
   return (
     <>
-      {/* <Accordion />
+      <Accordion />
       <hr />
       <RandomColorGenerator />
-      <hr /> */}
+      <hr />
       <StarRating />
+      <hr />
     </>
   )
 }

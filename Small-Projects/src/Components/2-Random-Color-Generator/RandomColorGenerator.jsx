@@ -61,9 +61,12 @@ function RandomColorGenerator() {
     }
 
     return (
-        <div className={style.wrapper}>
-            <p>Project 2</p>
-            <h2>Random Color Generator</h2>
+        <div className="container">
+            <div className="project-title">
+                <p>Project 2</p>
+                <h2>Random Color Generator</h2>
+            </div>
+
             <div className={style.controls}>
                 <div>
                     <label htmlFor='color-format'>Chose a Color Format: </label>

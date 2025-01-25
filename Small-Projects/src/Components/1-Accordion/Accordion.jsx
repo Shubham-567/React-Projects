@@ -37,8 +37,11 @@ function Accordion() {
 
     return (
         <div className={style.wrapper}>
-            <p>Project 1</p>
-            <h2>Accordion</h2>
+            <div className="project-title">
+                <p>Project 1</p>
+                <h2>Accordion</h2>
+            </div>
+
 
             <button onClick={handleSelectionToggle}>
                 {enableMultiSelection
@@ -70,7 +73,7 @@ function Accordion() {
                     <div className={style.error}>No data found!</div>
                 )}
             </div>
-        </div>
+        </div >
     );
 }
 
